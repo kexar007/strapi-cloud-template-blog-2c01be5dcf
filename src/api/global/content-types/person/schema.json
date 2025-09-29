@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "people"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "role": {
+      "type": "enumeration",
+      "required": true,
+      "default": "phd student",
+      "enum": [
+        "phd student",
+        "pg student",
+        "post doc",
+        "project staff",
+        "alumni"
+      ]
+    },
+    "roll_number": {
+      "type": "string",
+      "unique": true
+    },
+    "course": {
+      "type": "string"
+    }
+  }
+}
