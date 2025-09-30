@@ -13,26 +13,28 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "unique": true
     },
     "email": {
       "type": "email",
+      "required": false,
       "unique": true
     },
     "photo": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     },
     "role": {
       "type": "enumeration",
-      "required": true,
-      "default": "phd student",
       "enum": [
         "phd student",
-        "pg student",
+        "pg students",
         "post doc",
         "project staff",
         "alumni"
