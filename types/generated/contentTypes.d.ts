@@ -535,7 +535,14 @@ export interface ApiPersonPerson extends Struct.CollectionTypeSchema {
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.Enumeration<
-      ['phd student', 'pg students', 'post doc', 'project staff', 'alumni']
+      [
+        'phd student',
+        'pg student',
+        'post doc',
+        'project staff',
+        'alumni',
+        'supervisor',
+      ]
     >;
     roll_number: Schema.Attribute.String & Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
